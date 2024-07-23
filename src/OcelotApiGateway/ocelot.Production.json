@@ -17,7 +17,19 @@
     },
     {
       "UpstreamPathTemplate": "/offices/{everything}",
-      "UpstreamHttpMethod": [ "POST", "PUT", "DELETE", "GET" ],
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/offices/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "offices-api",
+          "Port": 8080
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/offices/{everything}",
+      "UpstreamHttpMethod": [ "POST", "PUT", "DELETE" ],
       "DownstreamPathTemplate": "/api/offices/{everything}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
@@ -32,8 +44,32 @@
       }
     },
     {
+      "UpstreamPathTemplate": "/doctors",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/doctors",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "profiles-api",
+          "Port": 8080
+        }
+      ]
+    },
+    {
       "UpstreamPathTemplate": "/doctors/{everything}",
-      "UpstreamHttpMethod": [ "POST", "PUT", "DELETE", "GET" ],
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/doctors/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "profiles-api",
+          "Port": 8080
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/doctors/{everything}",
+      "UpstreamHttpMethod": [ "POST", "PUT", "DELETE" ],
       "DownstreamPathTemplate": "/api/doctors/{everything}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
@@ -80,8 +116,32 @@
       }
     },
     {
+      "UpstreamPathTemplate": "/services",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/services",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "services-api",
+          "Port": 8080
+        }
+      ]
+    },
+    {
       "UpstreamPathTemplate": "/services/{everything}",
-      "UpstreamHttpMethod": [ "POST", "PUT", "DELETE", "GET" ],
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/services/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "services-api",
+          "Port": 8080
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/services/{everything}",
+      "UpstreamHttpMethod": [ "POST", "PUT", "DELETE" ],
       "DownstreamPathTemplate": "/api/services/{everything}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
@@ -96,8 +156,32 @@
       }
     },
     {
+      "UpstreamPathTemplate": "/specializations",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/specializations",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "services-api",
+          "Port": 8080
+        }
+      ]
+    },
+    {
       "UpstreamPathTemplate": "/specializations/{everything}",
-      "UpstreamHttpMethod": [ "POST", "PUT", "DELETE", "GET" ],
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/specializations/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "services-api",
+          "Port": 8080
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/specializations/{everything}",
+      "UpstreamHttpMethod": [ "POST", "PUT", "DELETE" ],
       "DownstreamPathTemplate": "/api/specializations/{everything}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
@@ -129,7 +213,19 @@
     },
     {
       "UpstreamPathTemplate": "/appointmentResults/{everything}",
-      "UpstreamHttpMethod": [ "POST", "PUT", "DELETE", "GET" ],
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/appointmentResults/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "appointments-api",
+          "Port": 8080
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/appointmentResults/{everything}",
+      "UpstreamHttpMethod": [ "POST", "PUT", "DELETE" ],
       "DownstreamPathTemplate": "/api/appointmentResults/{everything}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
