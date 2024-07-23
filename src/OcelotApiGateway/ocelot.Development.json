@@ -17,7 +17,19 @@
     },
     {
       "UpstreamPathTemplate": "/offices/{everything}",
-      "UpstreamHttpMethod": [ "POST", "PUT", "DELETE", "GET" ],
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/offices/{everything}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7255
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/offices/{everything}",
+      "UpstreamHttpMethod": [ "POST", "PUT", "DELETE" ],
       "DownstreamPathTemplate": "/api/offices/{everything}",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
@@ -32,8 +44,32 @@
       }
     },
     {
+      "UpstreamPathTemplate": "/doctors",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/doctors",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7255
+        }
+      ]
+    },
+    {
       "UpstreamPathTemplate": "/doctors/{everything}",
-      "UpstreamHttpMethod": [ "POST", "PUT", "DELETE", "GET" ],
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/doctors/{everything}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7082
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/doctors/{everything}",
+      "UpstreamHttpMethod": [ "POST", "PUT", "DELETE" ],
       "DownstreamPathTemplate": "/api/doctors/{everything}",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
@@ -48,8 +84,36 @@
       }
     },
     {
+      "UpstreamPathTemplate": "/patients",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/patients",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7082
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "IdentityApiKey",
+        "AllowedScopes": [ "profiles.api" ]
+      }
+    },
+    {
       "UpstreamPathTemplate": "/patients/{everything}",
-      "UpstreamHttpMethod": [ "POST", "PUT", "DELETE", "GET" ],
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/patients/{everything}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7082
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/patients/{everything}",
+      "UpstreamHttpMethod": [ "POST", "PUT", "DELETE" ],
       "DownstreamPathTemplate": "/api/patients/{everything}",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
@@ -80,8 +144,32 @@
       }
     },
     {
+      "UpstreamPathTemplate": "/services",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/services",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7149
+        }
+      ]
+    },
+    {
       "UpstreamPathTemplate": "/services/{everything}",
-      "UpstreamHttpMethod": [ "POST", "PUT", "DELETE", "GET" ],
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/services/{everything}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7149
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/services/{everything}",
+      "UpstreamHttpMethod": [ "POST", "PUT", "DELETE" ],
       "DownstreamPathTemplate": "/api/services/{everything}",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
@@ -96,8 +184,32 @@
       }
     },
     {
+      "UpstreamPathTemplate": "/specializations",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/specializations",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7149
+        }
+      ]
+    },
+    {
       "UpstreamPathTemplate": "/specializations/{everything}",
-      "UpstreamHttpMethod": [ "POST", "PUT", "DELETE", "GET" ],
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/specializations/{everything}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7149
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/specializations/{everything}",
+      "UpstreamHttpMethod": [ "POST", "PUT", "DELETE" ],
       "DownstreamPathTemplate": "/api/specializations/{everything}",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [

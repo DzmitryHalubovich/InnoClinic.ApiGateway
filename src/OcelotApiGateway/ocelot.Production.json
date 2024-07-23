@@ -84,8 +84,36 @@
       }
     },
     {
+      "UpstreamPathTemplate": "/patients",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/patients",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "profiles-api",
+          "Port": 8080
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "IdentityApiKey",
+        "AllowedScopes": [ "profiles.api" ]
+      }
+    },
+    {
       "UpstreamPathTemplate": "/patients/{everything}",
-      "UpstreamHttpMethod": [ "POST", "PUT", "DELETE", "GET" ],
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/patients/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "profiles-api",
+          "Port": 8080
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/patients/{everything}",
+      "UpstreamHttpMethod": [ "POST", "PUT", "DELETE" ],
       "DownstreamPathTemplate": "/api/patients/{everything}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
@@ -213,19 +241,7 @@
     },
     {
       "UpstreamPathTemplate": "/appointmentResults/{everything}",
-      "UpstreamHttpMethod": [ "GET" ],
-      "DownstreamPathTemplate": "/api/appointmentResults/{everything}",
-      "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "appointments-api",
-          "Port": 8080
-        }
-      ]
-    },
-    {
-      "UpstreamPathTemplate": "/appointmentResults/{everything}",
-      "UpstreamHttpMethod": [ "POST", "PUT", "DELETE" ],
+      "UpstreamHttpMethod": [ "POST", "PUT", "DELETE", "GET" ],
       "DownstreamPathTemplate": "/api/appointmentResults/{everything}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
