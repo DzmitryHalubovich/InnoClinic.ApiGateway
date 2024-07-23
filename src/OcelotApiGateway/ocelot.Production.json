@@ -1,17 +1,17 @@
 {
   "GlobalConfiguration": {
-    "BaseUrl": "https://localhost:7001"
+    "BaseUrl": "http://localhost:7001"
   },
   "Routes": [
     {
       "UpstreamPathTemplate": "/offices",
       "UpstreamHttpMethod": [ "GET" ],
       "DownstreamPathTemplate": "/api/offices",
-      "DownstreamScheme": "https",
+      "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 7255
+          "Host": "offices-api",
+          "Port": 8080
         }
       ]
     },
@@ -19,11 +19,11 @@
       "UpstreamPathTemplate": "/offices/{everything}",
       "UpstreamHttpMethod": [ "POST", "PUT", "DELETE", "GET" ],
       "DownstreamPathTemplate": "/api/offices/{everything}",
-      "DownstreamScheme": "https",
+      "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 7255
+          "Host": "offices-api",
+          "Port": 8080
         }
       ],
       "AuthenticationOptions": {
@@ -35,11 +35,11 @@
       "UpstreamPathTemplate": "/doctors/{everything}",
       "UpstreamHttpMethod": [ "POST", "PUT", "DELETE", "GET" ],
       "DownstreamPathTemplate": "/api/doctors/{everything}",
-      "DownstreamScheme": "https",
+      "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 7082
+          "Host": "profiles-api",
+          "Port": 8080
         }
       ],
       "AuthenticationOptions": {
@@ -51,11 +51,11 @@
       "UpstreamPathTemplate": "/patients/{everything}",
       "UpstreamHttpMethod": [ "POST", "PUT", "DELETE", "GET" ],
       "DownstreamPathTemplate": "/api/patients/{everything}",
-      "DownstreamScheme": "https",
+      "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 7082
+          "Host": "profiles-api",
+          "Port": 8080
         }
       ],
       "AuthenticationOptions": {
@@ -67,11 +67,11 @@
       "UpstreamPathTemplate": "/receptionists/{everything}",
       "UpstreamHttpMethod": [ "POST", "PUT", "DELETE", "GET" ],
       "DownstreamPathTemplate": "/api/receptionists/{everything}",
-      "DownstreamScheme": "https",
+      "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 7082
+          "Host": "profiles-api",
+          "Port": 8080
         }
       ],
       "AuthenticationOptions": {
@@ -83,11 +83,11 @@
       "UpstreamPathTemplate": "/services/{everything}",
       "UpstreamHttpMethod": [ "POST", "PUT", "DELETE", "GET" ],
       "DownstreamPathTemplate": "/api/services/{everything}",
-      "DownstreamScheme": "https",
+      "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 7149
+          "Host": "services-api",
+          "Port": 8080
         }
       ],
       "AuthenticationOptions": {
@@ -99,11 +99,11 @@
       "UpstreamPathTemplate": "/specializations/{everything}",
       "UpstreamHttpMethod": [ "POST", "PUT", "DELETE", "GET" ],
       "DownstreamPathTemplate": "/api/specializations/{everything}",
-      "DownstreamScheme": "https",
+      "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 7149
+          "Host": "services-api",
+          "Port": 8080
         }
       ],
       "AuthenticationOptions": {
@@ -115,11 +115,11 @@
       "UpstreamPathTemplate": "/appointments/{everything}",
       "UpstreamHttpMethod": [ "POST", "PUT", "DELETE", "GET" ],
       "DownstreamPathTemplate": "/api/appointments/{everything}",
-      "DownstreamScheme": "https",
+      "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 7074
+          "Host": "appointments-api",
+          "Port": 8080
         }
       ],
       "AuthenticationOptions": {
@@ -131,11 +131,11 @@
       "UpstreamPathTemplate": "/appointmentResults/{everything}",
       "UpstreamHttpMethod": [ "POST", "PUT", "DELETE", "GET" ],
       "DownstreamPathTemplate": "/api/appointmentResults/{everything}",
-      "DownstreamScheme": "https",
+      "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 7074
+          "Host": "appointments-api",
+          "Port": 8080
         }
       ],
       "AuthenticationOptions": {
